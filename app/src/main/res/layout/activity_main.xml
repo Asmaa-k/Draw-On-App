@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3ca">
+
+    <com.example.draw.DrawableImageView
+        android:id="@+id/stillshot_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/init_draw_icon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_white"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_pen_small"
+        tools:ignore="ContentDescription" />
+
+
+    <RelativeLayout
+        android:id="@+id/color_plate_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/init_draw_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:background="@drawable/circle_white"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/btn_dialog"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_color_plate_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pen_size_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/color_plate_container"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:background="@drawable/circle_white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/pen_size"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pen_size_icon" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/undo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:alpha="0.8"
+        android:animateLayoutChanges="true"
+        android:background="#000"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/undo_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle_white"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_undo"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/redo_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle_white"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_redo"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
